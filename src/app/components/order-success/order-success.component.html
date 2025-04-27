@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+</head>
+<body>
+  <div class="order-success-container">
+    <div class="success-box">
+      <h2>🎉 Order Confirmed!</h2>
+      <p class="subtitle">Thank you for ordering with <strong>FoodHub</strong>!</p>
+
+      <div class="order-details">
+        <h3>🧾 Order Summary</h3>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Subtotal:</strong> ₹{{ subtotal }}</p>
+        <p><strong>GST (18%):</strong> ₹{{ gst }}</p>
+        <p><strong>Discount:</strong> ₹{{ discount }}</p>
+        <p><strong>Total:</strong> ₹{{ total }}</p>
+      </div>
+
+      <h3>📍 Delivery Location</h3>
+      <div id="map" class="map-container"></div>
+    </div>
+  </div>
+</body>
+</html>

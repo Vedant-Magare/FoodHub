@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | FoodHub</title>
+  <link rel="stylesheet" href="contact.component.css" />
+</head>
+<body>
+  <main class="contact-container">
+    <section class="contact-header">
+      <h2>Contact Us</h2>
+      <p>If you have any questions, suggestions, or just want to say hi — we’d love to hear from you!</p>
+    </section>
+
+    <section class="contact-form-section">
+      <form (ngSubmit)="submitForm()" #contactForm="ngForm" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" [(ngModel)]="contact.name" required placeholder="Enter your name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="contact.email" required placeholder="Enter your email" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="4" [(ngModel)]="contact.message" required placeholder="Type your message here"></textarea>
+        </div>
+
+        <button type="submit" [disabled]="!contactForm.form.valid || isSubmitting">
+          <ng-container *ngIf="!isSubmitting; else loading">
+            Send Message
+          </ng-container>
+          <ng-template #loading>
+            <div class="spinner"></div> Sending...
+          </ng-template>
+        </button>
+
+              </form>
+
+      <!-- Success Message -->
+      <div *ngIf="showSuccessMessage" class="success-popup">
+        Thank you for contacting us! We'll get back to you soon. 😊
+      </div>
+    </section>
+
+
+    <section class="contact-info">
+      <h3>Get in Touch</h3>
+      <ul>
+        <li><strong>Email:</strong> supportfoodhub.com</li>
+        <li><strong>Phone:</strong> +91 9876543210</li>
+        <li><strong>Address:</strong> FoodHub HQ, MG Road, Mumbai, India</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

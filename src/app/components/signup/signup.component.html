@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+</head>
+<body>
+  <!-- src/app/components/signup/signup.component.html -->
+<div class="signup-container">
+  <!-- Success Toast -->
+  <div *ngIf="showSuccessMessage" class="alert-banner success">
+    <strong>Success!</strong> You’ve signed up successfully.
+    <button type="button" class="close-btn" (click)="showSuccessMessage = false">&times;</button>
+  </div>
+
+  <h2>Sign Up</h2>
+  <form (ngSubmit)="onSubmit()" #signupForm="ngForm" novalidate>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        required
+        [(ngModel)]="user.name"
+        #nameCtrl="ngModel"
+      />
+      <!-- <div class="error" *ngIf="nameCtrl.invalid && nameCtrl.touched">
+        Name is required.
+      </div> -->
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        email
+        [(ngModel)]="user.email"
+        #emailCtrl="ngModel"
+      />
+      <div class="error" *ngIf="emailCtrl.invalid && emailCtrl.touched">
+        <!-- <span *ngIf="emailCtrl.errors?.['required']">Email is required.</span> -->
+<span *ngIf="emailCtrl.errors?.['email']">Enter a valid email.</span>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input
+        id="phone"
+        name="phone"
+        type="text"
+        required
+        [(ngModel)]="user.phone"
+        #phoneCtrl="ngModel"
+      />
+      <!-- <div class="error" *ngIf="phoneCtrl.invalid && phoneCtrl.touched">
+        Phone number is required.
+      </div> -->
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input
+        id="address"
+        name="address"
+        type="text"
+        required
+        [(ngModel)]="user.address"
+        #addressCtrl="ngModel"
+      />
+      <!-- <div class="error" *ngIf="addressCtrl.invalid && addressCtrl.touched">
+        Address is required.
+      </div> -->
+    </div>
+
+    <div class="coord-group">
+      <div class="form-group">
+        <label>Latitude:</label>
+        <input type="text" [value]="user.latitude" readonly />
+      </div>
+      <div class="form-group">
+        <label>Longitude:</label>
+        <input type="text" [value]="user.longitude" readonly />
+      </div>
+      <button type="button" class="loc-btn" (click)="getLocation()">
+        Get Current Location
+      </button>
+    </div>
+
+    <button
+      type="submit"
+      class="submit-btn"
+      [disabled]="signupForm.invalid"
+    >
+      Register
+    </button>
+  </form>
+</div>
+
+
+  <script>
+    // Method to get the current location
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          // Access the latitude and longitude from the position object
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          // Assuming you have access to the Angular component,
+          // use Angular method to update the user's latitude and longitude
+          // Example:
+          this.user.latitude = latitude;
+          this.user.longitude = longitude;
+        }, function() {
+          alert("Geolocation is not supported or permission denied.");
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+  </script>
+</body>
+</html>

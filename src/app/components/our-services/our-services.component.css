@@ -1,0 +1,183 @@
+/* Our Service Section */
+.our-service-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.small-heading {
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.main-heading span {
+  color: #ff6b01;
+}
+
+.sub-text {
+  color: #777;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  gap: 24px;
+}
+
+.service-card {
+  min-width: 180px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.circle-img {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.circle-img img {
+  width: 70%;
+}
+
+.item-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.order-btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: #ff6b01;
+  color: #fff;
+  border: none;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: -1px;
+}
+
+.next-btn {
+  right: -2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .sub-text {
+    font-size: 12px;
+  }
+
+  .carousel {
+    gap: 16px;
+  }
+
+  .service-card {
+    min-width: 150px;
+  }
+
+  .circle-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle-img img {
+    width: 80%;
+  }
+
+  .item-name {
+    font-size: 14px;
+  }
+
+  .order-btn {
+    padding: 6px 12px;
+  }
+
+  .nav-btn {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .sub-text {
+    font-size: 12px;
+  }
+
+  .carousel {
+    gap: 10px;
+  }
+
+  .service-card {
+    min-width: 130px;
+  }
+
+  .circle-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-img img {
+    width: 80%;
+  }
+
+  .item-name {
+    font-size: 12px;
+  }
+
+  .order-btn {
+    padding: 4px 10px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+    width: 48px;
+    height: 48px;
+  }
+}

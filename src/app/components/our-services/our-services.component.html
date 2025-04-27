@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section class="our-service-section">
+    <p class="small-heading">- our service</p>
+    <h2 class="main-heading">
+      Bringing Quality and <br />
+      Convenience to <span>your table</span>
+    </h2>
+    <p class="sub-text">
+      Our service includes fast meal delivery, personalized catering, <br />
+      and more, all crafted with fresh ingredients.
+    </p>
+
+    <div class="carousel-wrapper">
+      <button class="nav-btn prev-btn" (click)="scrollLeft()">&lt;</button>
+
+      <div class="carousel" #carousel>
+        <div class="service-card" *ngFor="let item of services">
+          <div class="circle-img" [ngStyle]="{ 'background-color': item.bgColor }">
+            <img [src]="item.img" [alt]="item.name" />
+          </div>
+          <p class="item-name">{{ item.name }}</p>
+          <button class="order-btn" [ngStyle]="{ 'background-color': item.bgColor }">Order Now</button>
+        </div>
+      </div>
+
+      <button class="nav-btn next-btn" (click)="scrollRight()">&gt;</button>
+    </div>
+  </section>
+</body>
+</html>

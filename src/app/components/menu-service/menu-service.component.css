@@ -1,0 +1,135 @@
+.service-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 14px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.menu-list li.active,
+.menu-list li:hover {
+  background-color: #ff6b01;
+  color: white;
+}
+
+.menu-content {
+  flex: 1;
+  padding: 40px 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.menu-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 269px;
+  object-fit: cover;
+  display: block;
+}
+
+.item-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.item-info h4 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
+
+
+.price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  margin-right: 120px;
+}
+
+.add-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  background: #ff6b01;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 1001;
+}
+/* --- Responsive tweaks --- */
+@media (max-width: 768px) {
+  /* show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* make sidebar overlay */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* push content under hamburger */
+  .menu-content {
+    margin-left: 0;
+    padding-top: 60px;
+  }
+}

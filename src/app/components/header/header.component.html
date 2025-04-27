@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🍔 Food<span>Hub</span></div>
+
+    <ul class="nav-links">
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/menu-service" routerLinkActive="active">Services</a></li>
+      <!-- <li><a routerLink="/foods" routerLinkActive="active">Foods</a></li> -->
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
+
+    </ul>
+
+    <div class="auth-buttons">
+
+      <!-- Login Button (only when not logged in) -->
+      <button *ngIf="!isLoggedIn" routerLink="/login" class="btn-primary"> Login </button>
+
+      <!-- <button class="btn-outline" routerLink="/login">Login</button> -->
+      <button class="btn-primary" routerLink="/signup" routerLinkActive="active">Sign Up</button>
+
+
+      <!-- Logout Button (only when logged in) -->
+       <button *ngIf="isLoggedIn" (click)="logout()" class="btn-primary1">Logout </button>
+
+    </div>
+
+    <div class="hamburger" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+  </nav>
+
+</body>
+</html>

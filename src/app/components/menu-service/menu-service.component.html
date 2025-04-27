@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="service-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <ul class="menu-list">
+        <li *ngFor="let category of categories" (click)="selectCategory(category)" [class.active]="category === selectedCategory">
+          {{ category }}
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="menu-content">
+      <div class="menu-grid">
+        <div class="menu-item" *ngFor="let item of filteredItems; let i = index">
+          <img [src]="item.image" [alt]="item.name" />
+          <div class="item-info">
+            <h4>
+              {{ item.name }}
+              <img *ngIf="item.type === 'veg'" src="assets/images/green-dot.png" alt="Veg" style="width: 16px; height: 16px; margin-left: 8px;" />
+              <img *ngIf="item.type === 'non-veg'" src="assets/images/brown-dot.png" alt="Non-Veg" style="width: 16px; height: 16px; margin-left: 8px;" />
+            </h4>
+
+            <p class="price">Price: ₹{{ item.price }}</p>
+
+            <!-- Show 'Add' button if this item's index is not selected -->
+            <button *ngIf="selectedItemIndex !== i" class="add-btn" (click)="addClicked(i)">Add</button>
+
+            <!-- Show quantity section if this item's index is selected -->
+            <div *ngIf="selectedItemIndex === i">
+              <label>Quantity:</label>
+              <input type="number" [(ngModel)]="item.selectedQty" min="1" />
+              <button class="add-btn" (click)="addToCart(item)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Mobile toggle button -->
+ <button class="hamburger" (click)="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Sidebar -->
+<aside class="sidebar" [class.open]="sidebarOpen">
+  <ul class="menu-list">
+    <li *ngFor="let category of categories"
+        (click)="selectCategory(category)"
+        [class.active]="category === selectedCategory">
+      {{ category }}
+    </li>
+  </ul>
+</aside>
+
+<!-- Main Content -->
+<div class="menu-content">
+  <div class="menu-grid">
+    <div class="menu-item" *ngFor="let item of filteredItems; let i = index">
+      <!-- ... existing item markup ... -->
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

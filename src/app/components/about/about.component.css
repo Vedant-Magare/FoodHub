@@ -1,0 +1,205 @@
+.about-container {
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  color: #e74c3c;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-left: 350px;
+}
+
+.about-content {
+  max-width: 550px;
+  padding: 20px;
+  margin-right: 450px;
+}
+
+.about-content2 {
+  max-width: 550px;
+  padding: 20px;
+  margin-right: 500px;
+}
+
+.about-content2 h2 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.about-content2 p,
+.about-content2 ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-content2 ul {
+  padding-left: 20px;
+}
+
+.about-image2 img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-left: 500px;
+}
+
+.about-content h2 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.about-content p,
+.about-content ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-content ul {
+  padding-left: 20px;
+}
+
+.about-section3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.staff-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-left: 350px;
+}
+
+.staff-content {
+  max-width: 550px;
+  padding: 20px;
+  margin-right: 450px;
+}
+
+.staff-content h2 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.staff-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* =========================== */
+/* ✅ RESPONSIVE MEDIA QUERIES ✅ */
+/* =========================== */
+
+@media (max-width: 1200px) {
+  .about-image img,
+  .about-image2 img,
+  .staff-image img {
+    margin-left: 100px;
+  }
+
+  .about-content,
+  .about-content2,
+  .staff-content {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-image img,
+  .about-image2 img,
+  .staff-image img {
+    margin-left: 50px;
+  }
+
+  .about-content,
+  .about-content2,
+  .staff-content {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section,
+  .about-section.reverse,
+  .about-section3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image img,
+  .about-image2 img,
+  .staff-image img {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-content,
+  .about-content2,
+  .staff-content {
+    margin-right: 0;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-content h2,
+  .about-content2 h2,
+  .staff-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p,
+  .about-content2 p,
+  .about-content2 ul,
+  .staff-content p {
+    font-size: 0.95rem;
+  }
+}

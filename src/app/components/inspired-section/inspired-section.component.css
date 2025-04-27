@@ -1,0 +1,256 @@
+.inspired-section {
+  padding: 50px 40px;
+  background-color: #fff;
+}
+
+.inspired-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.inspired-image img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-left: 150px;
+}
+
+.inspired-content {
+  max-width: 600px;
+  margin-right: 250px;
+}
+
+.about-label {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.inspired-heading {
+  font-size: 38px;
+  font-weight: 800;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.inspired-heading .highlight {
+  color: #ff6b01;
+}
+
+.description {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+.icon-circle {
+  background-color: #ff6b01;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 12px;
+}
+
+.learn-more-btn {
+  background-color: #ff6b01;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #e65c00;
+}
+/* Default Styles */
+.inspired-section {
+  padding: 50px 40px;
+  background-color: #fff;
+}
+
+.inspired-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.inspired-image img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-left: 150px;
+}
+
+.inspired-content {
+  max-width: 600px;
+  margin-right: 250px;
+}
+
+.about-label {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.inspired-heading {
+  font-size: 38px;
+  font-weight: 800;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.inspired-heading .highlight {
+  color: #ff6b01;
+}
+
+.description {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+.icon-circle {
+  background-color: #ff6b01;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 12px;
+}
+
+.learn-more-btn {
+  background-color: #ff6b01;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .inspired-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inspired-image img {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .inspired-content {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .inspired-heading {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .features-list li {
+    font-size: 14px;
+  }
+
+  .learn-more-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+  .inspired-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inspired-image img {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .inspired-content {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .inspired-heading {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .features-list li {
+    font-size: 14px;
+  }
+
+  .learn-more-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
